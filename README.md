@@ -10,7 +10,7 @@ This section overviews the LoRa receiver code:
 
 It receives telemetry packets from the transmitter, extracts sensor data, and evaluates link performance using Bit Error Rate (BER) and packet tracking.
 
-========================================================================================
+============================================================================================
 2. PURPOSE
 
 The system is designed to:
