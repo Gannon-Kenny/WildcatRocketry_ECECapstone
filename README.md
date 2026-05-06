@@ -4,7 +4,7 @@
 Please see individual README files within their respective folder.
 
 ## LoRa Communication
-This section overviews the readme for the final reciever code product. The transmitter code is covered in the Component integration section as it deals more with the processing of the sensor (see there for more). This readme is specifically for the Reciever code with BER (the final iteration of our work). The test code and code for just sensors readme are not included because the BER is final product and built ontop of those.
+This section overviews the readme for the final reciever code product. The transmitter code is covered in the Component integration section as it deals more with the processing of the sensors (see there for more). This readme is specifically for the Reciever code with BER (the final iteration of our work). The other codes in file are test codes in which we do not provide a readme file as the final code is built on top of these. The Lora code w/ BER is final product and what is described.
 ### Receiver
 This section overviews the LoRa receiver code:
 
