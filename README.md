@@ -21,7 +21,7 @@ Measure Bit Error Rate (BER) for link quality analysis
 Track packet sequence numbers and detect packet loss
 Monitor signal quality using RSSI and SNR
 
-===============================================================================
+============================================================================================
 3. INPUT AND OUTPUT VARIABLES
 INPUTS:
 LoRa RF packets from transmitter
@@ -42,7 +42,7 @@ Packet loss (missed packets)
 RSSI (dBm)
 SNR (dB)
 
-================================================================================
+============================================================================================
 4. HARDWARE CONNECTIONS
 RADIO MODULE (SX1262):
 Signal	GPIO
@@ -51,7 +51,7 @@ DIO1	14
 NRST	12
 BUSY	13
 
-===============================================================================
+============================================================================================
 5. COMMUNICATION SYSTEM (LoRa)
 
 RADIO MODULE:
@@ -65,7 +65,7 @@ Spreading Factor: 9
 Coding Rate: 4/5
 - Matching transmitter settings
 
-===============================================================================
+============================================================================================
 6. PACKET STRUCTURE
 
 Each received LoRa packet contains:
@@ -83,12 +83,12 @@ Generated using XORSHIFT PRNG on transmitter
 Re-generated on receiver for comparison
 Used to compute Bit Error Rate
 
-===============================================================================
+============================================================================================
 7. LIBRARIES USED
 Arduino.h
 RadioLib.h
 
-===============================================================================
+============================================================================================
 8. SYSTEM OPERATION
 
 Loop process:
@@ -105,7 +105,7 @@ Calculate cumulative BER
 Print sensor data and link data
 Restart receiver mode
 
-===============================================================================
+============================================================================================
 9. FUNCTIONS
 
 setup():
@@ -122,7 +122,7 @@ Handles incoming packets
 Performs BER and packet loss calculations
 Outputs telemetry and diagnostics
 
-===============================================================================
+============================================================================================
 11. DATA FORMAT
 
 Serial Output Example:
@@ -133,7 +133,7 @@ Packets RX: N | Missed: M
 Cumulative BER: 0.0000000000  
 RSSI: -XX dBm  SNR: X.X dB  
 
-===============================================================================
+============================================================================================
 12. NOTES
 Designed to pair with LoRa TX system
 BER field must match transmitter PRNG exactly
