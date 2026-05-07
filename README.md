@@ -367,3 +367,39 @@ BER improves in accuracy over time (more packets) because its cumulative
 
 
 ## AI Implementation
+
+### Purpose & Files
+The purpose of this section of files is for the ground station's weather prediction algorithm, and trajectory & GUI.
+Inside this section you'll find tests from early on in the process for different tests that were carried out to resolve the best data set to use in the final product for the most accurate results.
+In addtion there is:
+1) dummy_data.py - a file which creates realistic simulated flight, weather and trajectory data
+2) dummy_flight_data.txt - an outdated output of [1], primarily used as a secondary testing case for the GUI, to see how it reacts with much more varying data.
+3) flight_log.txt - a log which is created to store the time and date, in addition to all other data recieved from the rocket for future use and testing.
+4) historic_weather_data.txt - the output of scraper.py, this file is data which has been scraped from the Weather Underground site. Currently this is data for the past 7 years, from March to May in the Utica area.
+5) realistic_flight_data - the new output of [1].
+6) rocket_weather_data.txt - data directly recieved from the rocket - this is also used in single test cases (where the rocket is not in motion, and you are testing only the AI, not the GUI).
+7) scraper.py - Running this file scrapes data from a specified website [currently Weather Underground] using it's API key, and parses the data into a more reasonable & readable state.
+8) weather.py - Runs the GUI and weather prediction algorithms. Uses data from the rocket, in real time.
+9) weather_file.py - Runs the GUI and weather prediction algorithms. Uses data from a file.
+
+In addition to these files, when run you will recieve four additonal files:
+1) feature_importance.png - A graph which shows how important each aspect input into the algorithm had on it's output.
+2) weather_prediction.png - A pie chart which shows the make up of the weather predictions probabilities.
+3) reliability.png - Shows the overall reliability of the system - currently should show ~75%.
+4) confusion_matrix.png - A confusion Matrix, showing the commonly mistaken weather of the given set.
+
+### Use
+The optimal use of these files are within VS Code, as it is the simplest to run, and easiest to get started with.
+Should you be using a VM or Linux based system (especially for testing):
+- This code was created on python3.12, meaning that should you run into problems, please attempt to revert your python environment first.
+- When running a python script, use "python3.12 [file.py]"
+
+#### Required Downloads
+This system uses a number of imports which need to be installed prior to use, it is recommended to set up an environment first.
+- pandas
+- numpy
+- threads
+- tkinter
+- matplotlib
+- seaborn
+- sklearn
